@@ -1,0 +1,48 @@
+// Colours
+$theme-colors: (
+	"primary": #08216c,
+	"secondary": #26cad3,
+	"teal": #26cad3,
+	"dark-blue": #08216c,
+	"white": #fff,
+	"cool-grey": #e8ebf3,
+	"body-grey": #f6f7fa,
+	"lighter-grey": #e5e9ed,
+	"light-grey": #b7bcc8,
+	"mid-grey": #495057,
+	"dark-grey": #2f2f2f,
+	"black": #000
+);
+
+$yiq-text-dark: map-get($theme-colors, "primary");
+
+$body-bg:    map-get($theme-colors, "body-grey");
+$body-color: map-get($theme-colors, "dark-grey");
+
+$directions: (
+	left: right,
+	right: left
+);
+
+@each $direction, $zero in $directions {
+
+	@each $name, $colour in $theme-colors {
+		.bg-#{$name}-split-#{$direction} {
+			background: $colour;
+			position: absolute;
+			z-index: -1;
+			bottom: 0;
+			top: 0;
+			left: -100%;
+			right: -100%;
+
+			@media screen and (min-width: 992px) {
+				#{$zero}: 0;
+				#{$direction}: calc(100% - 100vw);
+			}
+		}
+	}
+}
+.bg-dark-blues{
+	background-color: #001B56!important;
+}

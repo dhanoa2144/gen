@@ -1,0 +1,46 @@
+.accordion {
+
+    .row {
+        margin: 0 0 20px;
+    }
+
+    .btn-container {
+
+        .btn-wrapper {
+           // background: theme-color('primary');
+            //border-radius: .625rem;
+            box-sizing: border-box;
+            border: 1px solid #B7BCC8;
+            border-radius: 5px;
+            background-color: theme-color('white');;
+    
+            .btn {
+                font-size: 1.25rem;
+                color: theme-color('primary');
+                padding: 1rem 2rem;
+    
+                i {
+                    color: theme-color('primary');;
+                }
+
+                &:focus,
+                &:hover {
+                    border-radius: .625rem;
+                }
+            }
+        }
+    }
+
+    
+    .content-container {
+        display: none;
+        margin: 20px 0 0;
+        padding: 0;
+
+        .content-wrapper {
+            max-width: calc(100% - 1.25rem);
+            margin: auto;
+            padding: 0 15px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.woocommerce .blockUI.blockOverlay,
+.woocommerce .loader {
+    position: fixed !important;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 1 !important;
+    background: rgba(255,255,255,0.7) !important;
+
+
+    &::before {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align:center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70px;
+        opacity: 1;
+        transform: none;
+    }
+}

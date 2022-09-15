@@ -1,0 +1,43 @@
+.chip {
+    display: inline-flex;
+    border-radius: 100px;
+    padding: .5rem 1rem;
+    font-weight: 700;
+    margin-right: $spacer / 2;
+    margin-bottom: $spacer / 2;
+    
+    $chip-bg: map-get($theme-colors, 'mid-grey');
+    background: $chip-bg;
+    color: color-yiq($chip-bg);
+    
+    @include transition($btn-transition);
+
+    @include hover() {
+        $hover-background: darken($chip-bg, 7.5%);
+        background: $hover-background;
+        color: color-yiq($hover-background);
+    }
+
+    a {
+        margin-left: .5rem;
+        @include transition($btn-transition);
+        color: color-yiq($chip-bg);
+
+        @include hover() {
+            color: color-yiq($chip-bg);
+        }
+    }
+}
+
+@each $name, $colour in $theme-colors {
+    .chip-#{$name} {
+        background-color: $colour;
+        color: color-yiq($colour);
+
+        @include hover() {
+            $hover-background: darken($colour, 7.5%);
+            background: $hover-background;
+            color: color-yiq($hover-background);
+        }
+    }
+}

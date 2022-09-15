@@ -1,0 +1,121 @@
+.study-mode{
+    box-sizing: border-box;
+  height: 230px;
+  width: 351px;
+  border: 1px solid #B7BCC8;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 40px 0 rgba(0,32,46,0.15);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .study-content{
+    width: 300px;
+    margin: 20px;
+      button{
+      box-sizing: border-box;
+      height: 51px;
+      width: 219px;
+      border: 1px solid #26CAD3;
+      border-radius: 5px;
+      position: relative;
+      font-weight:700;
+      text-transform: capitalize;
+      background: #fff;
+      padding: 0 20px 0 0;
+      color: #091B51;
+        &:after{
+          border-top: 2.5px solid #08216c;
+          border-left: 2.5px solid #08216c;
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          color: transparent;
+          transform: translate(100%,-50%) rotate(135deg);
+          content: "";
+          top: 50%;
+        }
+        &:hover{
+          color: #fff;
+          background-color: #20abb3;
+          transition: all 0.3s ease;	
+          border-color: #1ea1a8;
+        }
+        &:hover:after{
+          border-top: 2.5px solid #fff;
+          border-left: 2.5px solid #fff;
+          transition: all 0.3s ease;	
+      
+        }
+      }
+  }
+}
+.course-details{
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #B7BCC8;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 40px 0 rgba(0,32,46,0.15);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+
+
+  .single-course{
+    margin: 20px;
+   
+    h2.course-title{
+    color: #08216C;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 30px;
+    }
+    .apply-now{
+      margin-top: 20px;
+    }
+    a{
+      border-radius: 5px;
+      background-color: #26CAD3;
+      position: relative;
+      border-color:  #26CAD3;
+      text-decoration: none;
+      padding: 10px 40px 10px 20px;
+      cursor: pointer;
+      font-weight: 700;
+      display: block;
+      text-align: center;
+      height: 47px;
+    
+      
+      &:after{
+        border-top: 2.5px solid #08216c;
+        border-left: 2.5px solid #08216c;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        color: transparent;
+        transform: translate(100%,-50%) rotate(135deg);
+        content: "";
+        top: 50%;
+      }
+      &:hover{
+        border-color: theme-color("primary");
+        color: #fff;
+        background-color: #20abb3;
+        transition: all 0.3s ease;	
+        border-color: #1ea1a8;
+      }
+      &:hover::after{
+        border-top: 2.5px solid #fff;
+        border-left: 2.5px solid #fff;
+        transition: all 0.3s ease;	
+      }
+      
+    }
+
+  }
+}

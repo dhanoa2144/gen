@@ -1,0 +1,53 @@
+.col {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#universal-header {
+    .mini-cart {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}
+
+// WordPress content
+.alignleft {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+
+p:empty {
+    display: none;
+}
+
+
+.featured-cards,
+.testimonials {
+    .card {
+        @include media-breakpoint-down(sm) {
+            height: auto !important;
+        }
+    }
+}
+
+// stop figures added in via wysiwyg content from going off screen
+#content {
+
+    figure {
+        max-width: 100%;
+    }
+}

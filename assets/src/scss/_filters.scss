@@ -1,0 +1,244 @@
+.gc-filter-container {
+
+	.gc-filter {
+		padding: 0 0.5rem;
+		margin: 0 0 $spacer;
+		width: 100%;
+
+		&:nth-child(odd) {
+
+			@include media-breakpoint-down(md) {
+				margin-left: -0.5rem;
+			}
+
+			@include media-breakpoint-down(sm) {
+				margin-left: 0;
+				padding: 0;
+			}
+		}
+
+		&:nth-child(even) {
+
+			@include media-breakpoint-down(md) {
+				margin-right: -0.5rem;
+			}
+
+			@include media-breakpoint-down(sm) {
+				margin-right: 0;
+				padding: 0;
+			}
+		}
+
+		&-header {
+
+			@include transition($btn-transition);
+
+			box-shadow: $box-shadow;
+			padding: $spacer;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: 700;
+			text-decoration: none;
+			cursor: pointer;
+
+			$filter-bg: theme-color('primary');
+			background: $filter-bg;
+			color: color-yiq($filter-bg);
+			$hover-background: darken($filter-bg, 7.5%);
+
+			@include media-breakpoint-down(sm) {
+				padding: $spacer ($spacer / 2);
+			}
+
+			@include hover() {
+				color: color-yiq($hover-background);
+
+				@include gradient-bg($hover-background);
+				text-decoration: none;
+			}
+
+			.fa-chevron-down {
+				transition: transform 0.6s ease;
+				// color: theme-colour("white");
+			}
+
+			&.active {
+
+				.fa-chevron-down {
+					transform: rotate(180deg);
+					transform-origin: center;
+				}
+			}
+		}
+
+		&-counter {
+			background: theme-color("secondary");
+			color: color-yiq(theme-color("secondary"));
+			display: inline-flex;
+			width: 24px;
+			height: 24px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 100%;
+			margin-left: 10px;
+		}
+
+		&-menu {
+
+			// menu base
+			list-style: none;
+			padding-left: 0;
+			font-weight: 700;
+			position: absolute;
+			background: theme-color('white');
+			box-shadow: $box-shadow;
+
+			a {
+				font-weight: 700;
+				display: block;
+				text-decoration: none;
+				transition: background-color 0.3s ease, padding 0.3s ease;
+			}
+
+			//gc-sidemenu
+
+			li {
+				$filter-menuitem-border: 1px solid theme-color("light-grey");
+				border-left: $filter-menuitem-border;
+				border-right: $filter-menuitem-border;
+				border-bottom: $filter-menuitem-border;
+				margin-bottom: 0;
+
+				a {
+					color: $body-color;
+					padding: $spacer * 0.75 $spacer * 0.75 $spacer * 0.75 $spacer*3;
+
+					&:hover {
+						background-color: theme-color("secondary");
+						color: color-yiq(theme-color("secondary"));
+						padding-left: $spacer*3.25;
+						text-decoration: none;
+					}
+
+					span::before {
+
+						content: "\f054";
+						margin-left: -$spacer*1.75;
+						transition: margin 0.3s ease;
+					}
+				}
+
+				&.gc-sidemenu__current {
+					// background-color: theme-colour("charcoal");
+
+					a {
+						// color: theme-colour("white");
+						cursor: default;
+
+						&:hover {
+							// background-color: theme-colour("charcoal");
+							padding: 15px 15px 15px 45px;
+
+							// @include breakpoint(lg) {
+							// 	padding: 20px 20px 20px 45px;
+							// }
+						}
+
+						&:hover::before {
+							// margin-right: $pad-sm;
+							margin-left: -25px;
+						}
+					}
+				}
+			}
+
+			margin-top: 0;
+			margin-bottom: 0;
+
+			// position: absolute;
+			width: 100%;
+			max-height: 0;
+			overflow: hidden;
+
+			transition: max-height 0.6s ease;
+
+			z-index: 500;
+
+			a span::before {
+				content: "\f0c8" !important;
+			}
+
+			a.gc-filter-selected {
+				background: theme-colour("teal-dark");
+				color: theme-colour("white");
+
+				span::before {
+					content: "\f14a" !important;
+				}
+			}
+		}
+
+		&-content {
+			position: relative;
+			overflow: visible;
+		}
+
+		&-icon {
+			// display: flex;
+
+			svg {
+				height: $spacer * 1.75;
+				width: $spacer * 1.75;
+
+				path {
+					fill: theme-color("white");
+				}
+			}
+		}
+	}
+}
+
+
+/*----------  Pagination  ----------*/
+
+.gc-filter-pagination {
+
+	a {
+		text-decoration: none;
+	}
+
+	.current,
+	.inactive,
+	.jump-to {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-family: theme-font("gotham");
+		color:  theme-colour("navy");
+
+		box-shadow: 0 1px 5px 0 rgba(0,0,0,0.10);
+
+		width: 60px;
+		height: 60px;
+		font-size: 18px;
+
+		// @include breakpoint(lg) {
+		// 	width: 40px;
+		// 	height: 40px;
+		// 	font-size: 14px;
+		// }
+	}
+
+	.current {
+		background: theme-colour("teal");
+	}
+
+	.inactive,
+	.jump-to {
+		background: theme-colour("white");
+	}
+}

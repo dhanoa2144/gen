@@ -1,0 +1,14 @@
+$table-border-color: #B7BCC8;
+
+$table-bg: #ffffff;
+$table-accent-bg: #E8EBF3;
+
+// Fix for Bootstrap not using the table backgroud when $table-striped-order is set to even;
+// $table-striped-order: even;
+// .table-striped tbody tr:nth-of-type(odd) {
+//     background-color: $table-bg;
+// }
+
+.table-striped tfoot tr:first-child {
+    border-top: 2px solid $table-border-color;
+}

@@ -1,0 +1,17 @@
+#logo img {
+    max-height: 40px;
+    width: 100%;
+    
+    @media screen and (min-width: 992px) {
+        max-height: 62px;
+
+    }
+}
+.no-margin-footer{
+    margin-bottom: -2px;;
+}
+img.footer-logo{
+    padding: 10px;
+    height: 70px;
+
+}

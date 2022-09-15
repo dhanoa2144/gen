@@ -1,0 +1,229 @@
+.campaign-banner-alt__img_inner{
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  right: 0;
+}
+.asp_text_button{
+  font-weight: 700 !important;
+}
+
+@media screen and (max-width: 992px) {
+    
+    
+    .front-slider .slick-slide .home-slider {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+    section.slider .front-slider .slick-list .item .slider-image img {
+      height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    }
+    section.slider {
+      /* background: rgb(8,33,108);*/
+    }
+    section.slider .front-slider .slick-slide .home-slider{
+      height: 100%;
+    }
+    .content {
+      padding-top: 0 !important;
+      padding-bottom: 60px;
+    }
+    section.slider .front-slider .slick-dots {
+      bottom: 100px;
+      top: auto;
+      border-radius: 5px;
+      background: #fff;
+      padding: 0 10px 5px;
+      transform: translate(-50%);
+      left: 50%;
+    }
+    
+    section.slider .max.campaign-banner-alt__inner h1{
+      font-size: 40px;
+      line-height: 45px;
+    }
+    
+    .woocommerce section.course-info .card a.button::after, section.course-info .card .btn::after, section.course-info .card .woocommerce a.button::after {
+      
+      top: 56% !important;
+    }
+    section.right-course .help .image img{
+      object-position: 35% center;
+    }
+    }
+
+
+@media screen and (max-width: 767px) {
+  .campaign-banner-alt__img_inner{
+    width: 100%;
+  }
+
+  section.slider .campaign-banner-alt.bg-inverted-darker{
+    height: 680px;
+  }
+
+    section.right-course .help-info {
+      width: 100%;
+      top: 180px;
+    }
+    section.right-course .help-info h1 {
+      color: #fff;
+      width: 100%;
+    }
+
+    section.slider .inner{
+      height: 320px;
+     }
+    section.slider .max.campaign-banner-alt__inner {
+      position: relative;
+      height: 320px;
+      }
+      section.slider .max.campaign-banner-alt__inner.home_slider {
+        height: 520px !important;
+
+      }
+      .banner-text-info{
+        position: absolute;
+        bottom: 0px;
+      }
+      .campaign-banner-text{
+        position: absolute;
+        bottom: 0px;
+      }
+
+      section.slider .max.campaign-banner-alt__inner.banner-text{
+
+        }
+        section.slider .inner .campaign-banner-alt__img_inner img{
+          object-position: top;
+          width: 100%;
+        }
+
+      section.slider .campaign-banner-alt__img img{
+        object-position: top;
+      }
+    section.slider .campaign-banner-alt__img::after {
+        background: rgb(8,33,108);
+   background: linear-gradient(to bottom,
+    rgba(8,33,108,0) 30%, 
+    rgba(3,34,110,0.33) 45%, 
+    rgba(0,34,112,1) 100%); 
+    width: 100%;
+   }
+  
+   section.slider .inner span{
+    max-width: 50rem !important;
+   }
+    section.slider .inner .campaign-banner-alt__img_inner::after { 
+      background: rgb(8,33,108);
+      background: linear-gradient(180deg,
+      rgba(8,33,108,0) 45%,
+      rgba(3,34,110,.8) 70%,#002270);
+       width: 100%;
+       height: 330px;
+    }
+
+    section.slider .max.campaign-banner-alt__inner h1, section.slider .max.campaign-banner-alt__inner span{
+      max-width: 32rem;
+  }
+  section.slider .max.campaign-banner-alt__inner h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+   
+    section.right-course {
+      background-repeat: no-repeat;
+      background-position: top;
+      height: 550px;
+    }
+   
+    .course-callout{
+        &::after{
+          content: "";
+          position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                background-image: linear-gradient(to bottom,
+                rgba(8,33,108,0) 40%,
+                rgba(8,33,108,0.0) 50.11%, 
+                rgba(8,33,108,0.4) 72.34%,
+                rgba(8,33,108,0.87) 79.89%, 
+                rgba(8,33,108,0.96) 88.06%,
+                #08216C 100%);
+                height: 420px;
+      }
+      img{
+        width: 100%;
+        object-position: 100% 25%;
+     }
+    }
+    .new-card{
+     position: relative;
+      }
+
+      section.genu-train .choose .image:after{
+        background: linear-gradient(to top,
+					#E8EBF3 40%,
+					rgba(232,235,243,0.99) 19.98%,
+					rgba(232,235,243,0.97) 42.51%,
+					rgba(232,235,243,0.47) 49.18%,
+					rgba(232,235,243,0.11) 56.47%,
+					rgba(232,235,243,0) 100%);
+          width: 100%;
+          height: 100%;
+          left: 0;
+      }
+      section.genu-train .choose-info{
+        top: 100px;
+        padding-top: 18rem;
+      }
+      section.genu-train .choose-text{
+        width: 100%;
+      }
+
+      section.right-course .help .image:after {
+        background-image: linear-gradient(to bottom, 
+					rgba(8,33,108,0) 43%,
+					rgba(8,33,108,0.53) 60.11%, 
+					rgba(8,33,108,0.89) 76.34%,
+					rgba(8,33,108,0.85) 82.89%, 
+					rgba(8,33,108,0.96) 88.06%,
+					#08216C 100%);
+          left: 0%;
+          height: 550px;
+      }
+      .btn-secondary-optional{
+        margin: 0;
+      }
+
+      section.genu-train .choose .image img{
+        width: 100%;
+        height: 400px;
+      }
+
+      section.right-course .help .image img{
+        width: 100%;
+        object-position: 30%;
+      }
+    }
+
+    @media screen and (max-width: 507px) {
+      .new-card,.new-card .card-body{
+        width: 100%;
+      }
+      section.slider .max.campaign-banner-alt__inner h1, section.slider .max.campaign-banner-alt__inner span{
+        margin-bottom: 0.5rem!important;
+      }
+      .accordion .btn-container .btn-wrapper .btn{
+        text-align: left;
+      }
+
+    }

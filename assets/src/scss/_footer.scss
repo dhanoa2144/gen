@@ -1,0 +1,20 @@
+footer {
+    ul {
+        li {
+            font-size: 12px ;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+#copyright {
+  /*  box-shadow: 0 300vw 0 300vw theme-color("primary");*/
+    font-size: 12px;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 16px;
+    }
+}

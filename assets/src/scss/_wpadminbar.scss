@@ -1,0 +1,26 @@
+$development: #28a745;
+$staging: #fd7e14;
+
+.gc-env {
+
+	&-development {
+
+		#wpadminbar {
+			background: $development;
+		}
+
+		#wpadminbar .ab-top-menu > li.hover > .ab-item,
+		#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
+		#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus,
+		#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus {
+			background: darken($development, 15%);
+		}
+	}
+
+	&-staging {
+
+		#wpadminbar {
+			background: $staging;
+		}
+	}
+}

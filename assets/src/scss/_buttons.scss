@@ -1,0 +1,149 @@
+$btn-font-weight: 700;
+
+$input-btn-padding-y: .625rem;
+$input-btn-padding-x: 2rem;
+
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: $input-btn-padding-x;
+
+@each $name, $colour in $theme-colors {
+	.focusable-#{$name} {
+		outline: 0;
+		//transition: all 0.15s ease-in-out;
+
+		&:focus {
+			box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($colour), $colour, 15%), 0.5);
+		}
+	}
+}
+
+.hoverable {
+	filter: brightness(100%);
+	//transition: all 0.15s ease-in-out;
+
+	&:hover {
+		filter: brightness(90%);
+	}
+}
+
+
+.button-one{
+	position: relative;
+	display: inline-block;
+	padding: 10px 40px 10px 20px !important;
+	font-size: 16px !important;
+	text-decoration: none;
+	font-weight: 700;
+	&:after{
+		border-top: 2.5px solid theme-color("primary");
+		border-left: 2.5px solid theme-color("primary");
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		color: transparent;
+		transform: translate(100%,-50%) rotate(135deg);
+		content: "";
+		top: 52%;
+	}
+	&:hover{
+		transition: all 0.3s ease;	
+		text-decoration: none;
+	}
+	&:hover:after{
+		border-top: 2.5px solid #fff;
+		border-left: 2.5px solid #fff;
+		transition: all 0.3s ease;	
+
+	}
+
+  }
+
+  .info-link{
+			position: relative;
+			color: theme-color("primary");
+			border-radius: 5px;
+			background-color: #26cad3;
+			border-color: #26cad3;
+			position: relative;
+			font-weight: 700;
+			padding: 10px 40px 10px 20px !important;
+			text-decoration: none;
+			cursor: pointer;
+	&:after{
+		border-top: 2.5px solid theme-color("primary");
+		border-left: 2.5px solid theme-color("primary");
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		color: transparent;
+		transform: translate(100%,-50%) rotate(135deg);
+		content: "";
+		top: 52%;
+	}
+	&:hover{
+		transition: all 0.3s ease;	
+		color: #fff;
+		text-decoration: none;
+	}
+	&:hover:after{
+		border-top: 2.5px solid #fff;
+		border-left: 2.5px solid #fff;
+		transition: all 0.3s ease;	
+
+	}
+  }
+
+.btn-secondary-optional{
+	box-sizing: border-box;
+    border: 1px solid #26cad3;
+    border-radius: 5px;
+    padding: 10px 40px 10px 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: bottom;
+	position: relative;
+	font-size: 16px;
+	font-weight: 700;
+	&:hover{
+		color:#fff;
+		text-decoration: none;
+		background-color: #20abb3;
+		transition: all 0.3s ease;	
+		border-color: #1ea1a8;
+		
+	}
+	&:after{
+		border-top: 2.5px solid #fff;
+		border-left: 2.5px solid #fff;
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		color: transparent;
+		transform: translate(100%,-50%) rotate(135deg);
+		content: "";
+		top: 50%;
+	}
+	&:hover:after{
+		border-top: 2.5px solid #fff;
+		border-left: 2.5px solid #fff;
+		transition: all 0.3s ease;	
+
+	}
+}
+// Override WooCommerce buttons
+.woocommerce a.button {
+
+	@extend .btn;
+	@extend .btn-secondary;
+}
+.border-footer-top{
+	width: 85%;
+	border-top: 1px solid #4C5E88 !important;
+	margin: 0 auto 25px;
+}
+p.footer-text{
+	margin-bottom: 35px;
+}

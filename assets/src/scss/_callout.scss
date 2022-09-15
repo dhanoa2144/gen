@@ -1,0 +1,128 @@
+
+.grey-bg{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,#E8EBF3,#E8EBF3);
+    padding: 20px;
+   
+
+}
+.related-section-title{
+    font-size: 26px !important;
+    margin-top:30px;
+}
+.card-help{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #b7bcc8;
+    border-radius: 0.625rem;
+}
+.callout-header{
+    margin-bottom: -150px;
+   /* pointer-events: none;*/
+}
+.course-callout{
+    	height: 350px;
+        position: relative;
+
+
+        &::after{
+            content: "";
+            position: absolute;
+                  left: 15px;
+                  top: 0;
+                  width: 70%;
+                  background-image: linear-gradient(to right,
+                  #08216c,rgba(8,33,108,1.00) 49.94%,
+                  rgba(8,33,108,0.90) 57.11%,
+                  rgba(8,33,108,0.85) 60.66%,
+                  rgba(8,33,108,0.73) 61.89%,
+                  rgba(8,33,108,0));
+                  height: 350px;
+        }
+        img{
+            width: 64%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .image{
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: end;
+            height: 100%;
+        }
+
+}
+.new-card{
+    position: absolute;
+    width: 700px;
+    padding: 30px 0 0 20px;
+    max-width: 470px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @media screen and (max-width: 992px) {
+      padding: 0px;
+    }
+
+
+    .card-body{
+       
+      
+        h2{
+            color: #00CED6 !important;
+            font-size: 30px;
+            margin-bottom: 3px;
+        }
+        h4{
+            font-size: 30px;
+            color: #fff;
+        }
+        p{
+            color: #fff;
+            padding: 15px 0;
+            @media screen and (max-width: 992px) {
+                padding-right: 50px;
+            }
+            @media screen and (max-width: 767px) {
+                padding: 20px 0;
+            }
+    
+        }
+        a{
+            position: relative;
+            padding: 10px 40px 10px 20px;
+            border-radius: 5px;
+            border-color: #26cad3;
+            &:after{
+                border-top: 2.5px solid #08216c;
+                border-left: 2.5px solid #08216c;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                color: transparent;
+                transform: translate(100%,-50%) rotate(135deg);
+                content: "";
+                top: 50%;
+                
+            }
+            &:hover{
+                transition: all 0.3s ease;	
+            }
+            &:hover:after{
+                transition: all 0.3s ease;
+				border-top: 2.5px solid #fff;
+				border-left: 2.5px solid #fff;
+                	
+			}
+        }
+        
+    }
+}

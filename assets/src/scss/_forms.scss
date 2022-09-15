@@ -1,0 +1,128 @@
+.woocommerce {
+
+	form {
+
+		.form-row {
+
+			@extend .form-group;
+
+			display: block;
+			padding: 0 !important;
+
+			&.form-row-first {
+
+				@include media-breakpoint-down(xs) {
+					width: 100%;
+				}
+			}
+
+			&.form-row-last {
+
+				@include media-breakpoint-down(xs) {
+					width: 100%;
+				}
+			}
+
+			&.place-order {
+				padding: 1rem !important;
+
+				button#place_order {
+					margin-bottom: 0 !important;
+				}
+			}
+		}
+
+		.input-text {
+
+			@extend .form-control;
+		}
+
+		a {
+			&.remove {
+				line-height: 0.8;
+				margin: auto;
+			}
+		}
+
+		.product-quantity {
+			text-align: center;
+
+			.quantity {
+
+				.input-text {
+
+					&.qty {
+						display: inline-block;
+						max-width: 58px;
+					}
+				}
+			}
+		}
+
+		.cart {
+
+			tr {
+
+				td.actions {
+
+					@include media-breakpoint-down(sm) {
+						text-align: center !important;
+
+						.coupon {
+
+							.form-control {
+								width: 80% !important;
+								margin: 0 auto 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.cart-collaterals {
+
+		.cross-sells {
+
+			li {
+
+				&.product {
+
+					.button {
+
+						@include media-breakpoint-between(md, lg) {
+							padding: 0.625rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Checkout - Place Order - Form Headings
+ */
+.woocommerce-shipping-fields h3,
+.woocommerce-additional-fields h3,
+h3#order_review_heading {
+	margin-top: map-get($spacers, 4);
+}
+
+
+/**
+ * Edwiser Bridge
+ */
+div#user_login label {
+	letter-spacing: unset;
+}
+
+.eb-user-reg-form,
+.eb-wrap-login-form {
+	max-width: 24rem;
+
+	> form > p:last-child {
+		margin-bottom: 0;
+	}
+}

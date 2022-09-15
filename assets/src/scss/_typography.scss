@@ -1,0 +1,83 @@
+@font-face {
+	font-family: 'DINRoundPro';
+	src: url('../../fonts/DINRoundPro.woff2') format('woff2'),
+		url('../../fonts/DINRoundPro.woff') format('woff'),
+		url('../../fonts/DINRoundPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'DINRoundPro';
+	src: url('../../fonts/DINRoundPro-Bold.woff2') format('woff2'),
+		url('../../fonts/DINRoundPro-Bold.woff') format('woff'),
+		url('../../fonts/DINRoundPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'DINRoundPro';
+	src: url('../../fonts/DINRoundPro-Medi.woff2') format('woff2'),
+		url('../../fonts/DINRoundPro-Medi.woff') format('woff'),
+		url('../../fonts/DINRoundPro-Medi.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'YWFT Sugar';
+	src: url('../../fonts/YWFTSugar-Regular.woff2') format('woff2'),
+		url('../../fonts/YWFTSugar-Regular.woff') format('woff'),
+		url('../../fonts/YWFTSugar-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+$font-family-sans-serif: "DINRoundPro", sans-serif;
+
+$headings-font-family: "DINRoundPro", sans-serif;
+$headings-font-weight: 700;
+$headings-color: map-get($theme-colors, "primary");
+
+@for $i from 1 through 4 {
+	.display-#{$i} {
+		font-family: "YWFT Sugar", sans-serif;
+	}
+}
+
+$border-color: map-get($theme-colors, "light-grey");
+
+// Custom atomic classes.
+.text-underline {
+	text-decoration: underline;
+}
+
+.font-weight-light {
+	font-weight: 400 !important;
+}
+
+.font-weight-medium {
+	font-weight: 500 !important;
+}
+
+.rounded-xl {
+	border-radius: 0.625rem !important;
+}
+
+
+@for $i from 1 through 5 {
+	$base: 10;
+	$fontsize: $base * $i;
+	.font-#{$fontsize} {
+		font-size: ($fontsize * 0.65) + 0px !important;
+
+		@media(min-width: 992px) {
+			font-size: $fontsize + 0px !important;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.svg-icon {
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+        height: $spacer * 1.25;
+        width: $spacer * 1.25;
+    }
+}
+
+.svg-icon-lg svg {
+    height: $spacer * 1.75;
+    width: $spacer * 1.75;
+}
+
+.svg-icon-sm svg {
+    height: $spacer * .75;
+    width: $spacer * .75;
+}
+
+@each $name, $colour in $theme-colors {
+    .svg-icon-#{$name} svg path {
+        fill: $colour;
+    }
+}

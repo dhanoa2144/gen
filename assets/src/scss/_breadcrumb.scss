@@ -1,0 +1,27 @@
+.yoast {
+    width: 100%;
+    border-bottom: #d0d4dc 1px solid;
+    padding: 20px 20px 0;
+    background-color: #fff;
+  }
+.gen-bread{
+	width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  i{
+    //font-weight: normal;
+    padding: 4px;
+    font-size: 12px;
+  }
+}
+#breadcrumbs a.text-white {
+  color: #000b44 !important;
+  text-underline-offset: 4px;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.breadcrumb_last{
+  color: #091B51 !important;
+  font-weight: 500;
+}

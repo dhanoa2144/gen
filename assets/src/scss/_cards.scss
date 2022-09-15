@@ -1,0 +1,108 @@
+$card-border-color: map-get($theme-colors, "light-grey");
+$card-border-radius: 0.625rem;
+$card-spacer-x: 1.5rem;
+
+.card {
+	transition: all 0.2s ease-out;
+	overflow: hidden;
+	display: block !important;
+
+	&:hover {
+		margin-top: -5px;
+		margin-bottom: 5px;
+		box-shadow: 0 10px 15px 5px theme-color("light-grey");
+	}
+
+	&.no-hover {
+
+		&:hover {
+			margin-top: 0;
+			margin-bottom: 0;
+			box-shadow: 0 10px 15px 5px theme-color("light-grey");
+		}
+	}
+
+	.card-image-wrapper {
+		position: relative;
+		margin-bottom: -15px;
+
+		.card-image {
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			.overlay {
+				/*background-image: url(../../images/white-curve-bg.svg);*/
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: bottom;
+				position: absolute;
+				bottom: -1px;
+			}
+		}
+	}
+
+	.card-body {
+
+		.sale-badge {
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				border-color: transparent;
+				border-style: solid;
+			}
+
+			&::after {
+				border-width: 2.35em;
+				border-right-color: #0c0;
+				border-top-color: #0c0;
+			}
+
+			span {
+				position: absolute;
+				top: 20px;
+				right: -5px;
+				font-size: 16px;
+				width: 50px;
+				z-index: 1;
+				transform: rotate(45deg);
+				color: theme-color("white");
+				font-weight: 500;
+				letter-spacing: 2px;
+			}
+		}
+
+		.feat-links {
+			text-decoration: none;
+			border-bottom: 3px solid theme-color("secondary");
+		}
+
+		.enrol-btn {
+
+			form {
+
+				&.cart {
+					margin-top: 1rem;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.list-unstyled {
+			span {
+				color: theme-color("primary");
+				font-weight: 500;
+			}
+		}
+	}
+}
+.related-title{
+	font-size: 22px !important;
+	line-height: 30px;
+}
