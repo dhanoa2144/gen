@@ -1,4 +1,4 @@
-![Deploy Website](https://github.com/grindstonecreative/genu-training/workflows/Deploy%20Website/badge.svg)
+
 
 # Wordpress GenX Theme
 
